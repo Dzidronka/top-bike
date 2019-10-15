@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <title>TopBike </title>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <script src="java.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="logo-top"><a href="index.html"><img id="logo" src="img/Top.jpg" alt="logo"></a></div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item ">
+                    <a class="nav-link" href="index.html">Strona Główna</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tips.html">Porady</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="bikes.html">Rowery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tests.html">Trasy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <script>
+        function expand(imgs) {
+            var expandImg = document.getElementById("expandedImg");
+            var imgText = document.getElementById("imgtext");
+            expandImg.src = imgs.src;
+            imgText.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+        }
+
+    </script>
+
+
+    <div class="split left" id="sleft">
+        <div class="rowBike">
+            <div class="columnBike">
+                <img id="bike1" src="img/bikes/cervello/p5x3.jpg" alt="Cervello Bike" style="width:100%" onclick="expand(this);">
+            </div>
+            <div class="columnBike">
+                <img src="img/bikes/cervello/p5x4.jpg" alt="Cervello Bike" style="width:100%" onclick="expand(this);">
+            </div>
+            <div class="columnBike">
+                <img src="img/bikes/cervello/p5x2.jpg" alt="Cervello Bike" style="width:100%" onclick="expand(this);">
+            </div>
+            <div class="columnBike">
+                <img src="img/bikes/cervello/p5x.jpg" alt="Cervello Bike" style="width:100%" onclick="expand(this);">
+            </div>
+        </div>
+
+        <div class="container">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <img src="img/bikes/cervello/p5x3.jpg" id="expandedImg" style="width:100%" alt="Cervello Bike">
+            <div id="imgtext"></div>
+        </div>
+    </div>
+
+    <div class="split right" id="sright">
+        <h3 id="headSpec">CERVELLO P5X ETAP TRIATHLON BIKE</h3>
+        <table class="specification">
+            <tr class="spec">
+                <td class="thBike">ROK KATALOGOWY</td>
+                <td class="trBike">2019</td>
+            </tr>
+            <tr class="spec">
+                <td class="thBike">RAMA</td>
+                <td class="trBike">Cervélo All-Carbon, P5X Fork
+                </td>
+            </tr>
+            <tr class="spec">
+                <td class="thBike">WIDELEC</td>
+                <td class="trBike">Cervelo All-Carbon P5X</td>
+            </tr>
+            <tr class="spec">
+                <td class="thBike">NAPĘD</td>
+                <td class="trBike">Cervelo P5X Integrated Aerobar</td>
+            </tr>
+            <tr class="spec">
+                <td class="thBike">HAMULCE</td>
+                <td class="trBike">TRP HY/RD Hydraulic Disc, hydrauliczne</td>
+            </tr>
+            <tr class="spec">
+                <td class="thBike">KOŁA</td>
+                <td class="trBike">ENVE SES 7.8 Disc thru-axle, opony Continental GP4000 S II 700 x 25c </td>
+            </tr>
+            <tr class="spec">
+                <td class="thBike"> CENA </td>
+                <td class="trBike">70 630 zł</td>
+            </tr>
+        </table>
+    </div>
+    <div class="footer">
+
+        <div id="cookies-message-container">
+            <div id="cookies-message"><img id="monster" src="img/monster3.jpg" alt="">
+                <p id="cooktext">Ciasteczka! Om-nom-nom-nom-nom-nom.<a href="javascript:WHCloseCookiesWindow();" id="accept-cookies-checkbox">Nom nom</a></p>
+            </div>
+            <div id="foot-button"></div>
+            <div class="split right">
+                <div class="socialmedia">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                </div>
+            </div>
+            <div class="split left" id="footleft">
+                <div class="rowBike">
+
+                    <div id="cont">
+                        <div class="footer_center">
+                            <h3>TOP BIKE</h3>
+                            <h6>Autorka strony: Alicja Kubus</h6>
+                            <h6>Nr albumu: 27366</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        expand(document.getElementById('bike1'));
+
+    </script>
+
+</body>
+
+</html>
